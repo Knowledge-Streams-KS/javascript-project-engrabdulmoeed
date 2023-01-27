@@ -1,0 +1,18 @@
+body {
+    background-color: antiquewhite;
+}
+
+.main_container {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.list {
+    padding-top: 8rem;
+}
+
+img {
+    height: 294px;
+    width: 200px;
+}
