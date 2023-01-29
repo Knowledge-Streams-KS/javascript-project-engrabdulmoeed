@@ -42,13 +42,14 @@ body {
 }
 
 .t_search {
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 
 .button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 6.5rem;
+    width: 5rem;
     border-radius: 0.7rem;
+    background-color: chartreuse;
 }
 
 .list {
@@ -72,7 +73,7 @@ body {
 }
 
 img {
-    height: 294px;
-    width: 200px;
+    height: 220.5px;
+    width: 150px;
     border-radius: 0.7rem
 }

@@ -15,21 +15,24 @@
     <div class="main_container">
       <div class="searchbar">
         <div class="t_search">
-          <input type="text" id="title_search" class="search search_text" />
-          <button type="submit" id="search_button" class="search button">
-            Search by Title
-          </button>
+          <input
+            type="text"
+            placeholder="Name"
+            id="title_search"
+            class="search search_text"
+          />
         </div>
         <div>
           <input
             type="number"
             max="2023"
             min="1900"
+            placeholder="Year"
             id="year_filter"
             class="search search_text"
           />
-          <button type="submit" id="filter_button" class="search button">
-            Filter by Year
+          <button type="submit" id="search_button" class="search button">
+            Search 🔍
           </button>
         </div>
       </div>
@@ -39,43 +42,10 @@
       <div id="movie"></div>
     </div>
 
-    <script>
-      const title = document.getElementById("title_search");
-      const year = document.getElementById("year_filter");
-
-      const getData = async (title) => {
-        alert(title.value);
-        const resp = await fetch(
-          `http://www.omdbapi.com/?s=${title.value}&apikey=34137365`
-        );
-        const data = await resp.json();
-        const movie_array = data.Search;
-        document.getElementById("movie").innerHTML = "";
-        movie_array.map(listing);
-        console.log(movie_array);
-        console.log(data);
-      };
-
-      search_button.addEventListener("click", () => {
-        getData(title);
-      });
-
-      function listing(data) {
-        const abc = document.getElementById("movie");
-
-        let type = data.Type;
-        let require = "movie";
-        let result = type.localeCompare(require);
-
-        if (result === 0) {
-          const details = `<div id="movie" class="dis">
-          <img src="${data.Poster}">
-          <h3 class="year_h">${data.Title}</h3>
-          <h3 class="year_h">[${data.Year}]</h3>
-          </div>`;
-          abc.insertAdjacentHTML("afterbegin", details);
-        }
-      }
-    </script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="script.js"
+    ></script>
   </body>
 </html>
